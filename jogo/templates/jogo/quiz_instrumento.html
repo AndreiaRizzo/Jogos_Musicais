@@ -1,0 +1,53 @@
+<!-- nome_da_aplicacao/templates/nome_da_aplicacao/quiz_instrumento.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz de Instrumento</title>
+    <style>
+        /* Estilos para esconder a imagem de palmas inicialmente */
+        #gifAcerto {
+            display: none; /* Esconde a imagem por padrão */
+            margin-top: 20px; /* Espaço acima da imagem */
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual é o nome deste instrumento?</h1>
+    
+    <!-- Exibe a imagem do instrumento -->
+    <img src="{% static 'jogo/imagens/trompeteCrian.jpg' %}" alt="Trompete" style="width:300px; height:auto;">
+
+    <!-- Opções de resposta -->
+    <button onclick="verificarResposta('Trompete')">Trompete</button>
+    <button onclick="verificarResposta('Violino')">Violino</button>
+    <button onclick="verificarResposta('Flauta')">Flauta</button>
+
+    <!-- Áudio para resposta correta -->
+    <audio id="audioAcerto" src="{% static 'jogo/sons/TrompeteAcerto.mp3' %}" preload="auto"></audio>
+    <div id="gifAcerto">
+        <img src="{% static 'jogo/imagens/gifAcerto.gif' %}" alt="Acerto" style="width:200px; height:auto;">
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        function verificarResposta(resposta) {
+            const respostaCorreta = "Trompete";
+            if (resposta === respostaCorreta) {
+                // Toca o som de acerto
+                document.getElementById("audioAcerto").play();
+                document.getElementById("gifAcerto").style.display = "block";
+
+            } else {
+                alert("Ops! Tente novamente.");
+            }
+        }
+    </script>
+
+
+    <br>
+    <a href="{% url 'quiz_instrumento' %}">Tente outro instrumento</a> <!-- Link para reiniciar o quiz -->
+</body>
+</html>
