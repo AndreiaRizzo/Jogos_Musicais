@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ jogo.nome }}</title>
+    <link rel="stylesheet" href="{% static 'jogo/css/style.css' %}">
+
+</head>
+<body>
+    <h1>{{ jogo.nome }}</h1>
+    <p><strong>Descrição:</strong> {{ jogo.descricao }}</p>
+    <p><strong>Nível de Dificuldade:</strong> {{ jogo.nivel_dificuldade }}</p>
+
+    <!-- Link para jogar o jogo -->
+    <a href="{{ jogo.url_jogo }}" target="_blank">Jogar</a>  <!-- Usa a URL armazenada -->
+
+    <br>
+    <a href="{% url 'home' %}">Voltar para a página inicial</a>
+</body>
+</html>

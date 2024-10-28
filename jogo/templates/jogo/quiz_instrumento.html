@@ -11,7 +11,8 @@
     
 </head>
 <body>
-    <h1>Qual é o nome deste instrumento?</h1>
+    <h1>Qual é o nome destes instrumentos?<br>
+    Acerte para ouvir o som dele!</h1>
     
     <!-- Exibe a imagem do instrumento -->
     <img src="{% static 'jogo/imagens/trompeteCrian.jpg' %}" alt="Trompete" style="width:300px; height:auto;"><br>
@@ -27,11 +28,11 @@
         <img src="{% static 'jogo/imagens/gifAcerto.gif' %}" alt="Acerto" style="width:200px; height:auto;">
     </div>
 
-    <!-- Script JavaScript -->
+   
     
 
     <script src="{% static 'jogo/js/script.js' %}"></script>
     <br>
-    <a href="{% url 'quiz_instrumento' %}">Tente outro instrumento</a> <!-- Link para reiniciar o quiz -->
+    <a href="{% url 'home' %}">Voltar para a página inicial</a>
 </body>
 </html>

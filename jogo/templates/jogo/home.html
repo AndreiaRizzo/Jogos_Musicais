@@ -12,10 +12,14 @@
     <div class="content">
         <h1>Bem-vindo aos Joguinhos musicais!</h1>
         <ul>
-            <li><a href="{% url 'quiz_instrumento' %}">Quiz de Instrumento</a></li>
             
-            <!-- Adicione mais joguinhos aqui -->
+            {% for jogo in jogos %}
+                <li>
+                    <a href="{% url 'jogo_detalhes' jogo.id %}">{{ jogo.nome }}</a>
+                </li>
+            {% endfor %}
         </ul>
+        <a href="{% url 'cadastro' %}">Cadastrar Usuário</a> 
     </div>
 </body>
 </html>

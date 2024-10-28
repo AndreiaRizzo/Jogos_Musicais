@@ -8,6 +8,7 @@ class Jogo(models.Model):
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
     nivel_dificuldade = models.CharField(max_length=50)
+    url_jogo = models.CharField(max_length=200)
     
     def __str__(self):
         return self.nome
@@ -15,7 +16,8 @@ class Jogo(models.Model):
 class Usuario(models.Model):
     nome = models.CharField(max_length=100)
     idade = models.IntegerField()
-       
+    avatar = models.CharField(max_length=100, default="avatar1")  # Novo campo para armazenar o avatar
+    
     def __str__(self):
         return self.nome
 
