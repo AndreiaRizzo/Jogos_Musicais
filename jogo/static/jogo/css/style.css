@@ -1,0 +1,31 @@
+/* static/nome_da_aplicacao/css/estilo.css */
+
+body {
+    background-color: #f0f0f0; /* Cor de fundo */
+    font-family: Arial, sans-serif; /* Fonte da página */
+    text-align: center;
+}
+
+h1 {
+    color: #333; /* Cor do título */
+    text-align: center; /* Centraliza o título */
+}
+
+button {
+    background-color: #4CAF50; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    margin: 10px; /* Espaçamento entre os botões */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+button:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+#gifAcerto {
+    display: none; /* Estilo padrão */
+    margin-top: 20px; /* Espaçamento acima da imagem */
+}

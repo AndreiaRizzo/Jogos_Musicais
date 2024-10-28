@@ -1,0 +1,52 @@
+body {
+    /* Definindo a imagem de fundo */
+    background-image: url("../imagens/home.jpg"); /* O caminho deve ser relativo ao arquivo CSS */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    position: relative; /* Para o posicionamento de elementos filhos */
+    height: 100vh; /* Altura total da viewport */
+    margin: 0; /* Remove margens padrão */
+    
+    font-family: Arial, sans-serif; /* Fonte da página */
+    text-align: center;
+}
+
+
+
+
+/* Um contêiner para o conteúdo da página, se necessário */
+.content {
+    position: relative;
+    z-index: 1; /* Para garantir que o conteúdo fique acima do fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento ao redor do conteúdo */
+}
+
+h1 {
+    font-size: 5em; /* Tamanho do texto do título, ajuste conforme necessário */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.content a {
+    font-size: 3em; /* Aumenta o tamanho do texto do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: white; /* Define a cor do texto do link (opcional) */
+}
+
+.content a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse (opcional) */
+}
+
+
+/* Para a camada de fundo com transparência */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Preto com 50% de opacidade */
+    z-index: 0; /* Fica atrás do conteúdo */
+}

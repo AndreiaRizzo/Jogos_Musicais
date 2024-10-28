@@ -3,6 +3,10 @@
 from django.shortcuts import render
 import random
 
+
+def home(request):
+    return render(request, 'jogo/home.html')
+
 def quiz_instrumento(request):
     # Dados do instrumento
     instrumento_correto = {
