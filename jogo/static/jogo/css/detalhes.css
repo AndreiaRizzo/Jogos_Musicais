@@ -1,0 +1,67 @@
+/* Configurações gerais */
+body {
+    background-image: url("../imagens/notas-musicais.avif"); /* O caminho deve ser relativo ao arquivo CSS */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    position: relative; /* Para o posicionamento de elementos filhos */
+    height: 80vh; /* Altura total da viewport */
+    margin: 0; /* Remove margens padrão */
+
+    font-family: Arial, sans-serif;
+   
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+h1 {
+    color: #333;
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 2rem;
+    margin: 15px 10px;
+}
+
+/* Link para jogar o jogo */
+a.jogar {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+a.jogar:hover {
+    background-color: #2a7e2e;
+}
+
+/* Link para voltar */
+a.voltar {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+a.voltar:hover {
+    color: #0056b3;
+}
+
+/* Estilo para os textos destacados */
+strong {
+    color: #555;
+}

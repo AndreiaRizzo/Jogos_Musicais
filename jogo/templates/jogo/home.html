@@ -18,8 +18,9 @@
                     <a href="{% url 'jogo_detalhes' jogo.id %}">{{ jogo.nome }}</a>
                 </li>
             {% endfor %}
-        </ul>
-        <a href="{% url 'cadastro' %}">Cadastrar Usuário</a> 
+        </ul><br>
+        
     </div>
+    <a href="{% url 'cadastro' %}" class="cadastro-link">Cadastrar Usuário</a> 
 </body>
 </html>
