@@ -1,0 +1,74 @@
+
+body {
+    background-image: url("../imagens/notas-musicais.avif"); /* O caminho deve ser relativo ao arquivo CSS */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    position: relative; /* Para o posicionamento de elementos filhos */
+    height: 80vh; /* Altura total da viewport */
+    margin: 0; /* Remove margens padrão */
+
+    font-family: Arial, sans-serif;
+   
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+h1 {
+    color: #333;
+    /* Cor do título */
+    text-align: center;
+    /* Centraliza o título */
+}
+
+button {
+    background-color: #4CAF50;
+    /* Cor do botão */
+    color: white;
+    /* Cor do texto do botão */
+    border: none;
+    /* Remove a borda padrão */
+    padding: 10px 20px;
+    /* Espaçamento interno do botão */
+    margin: 10px;
+    /* Espaçamento entre os botões */
+    cursor: pointer;
+    /* Muda o cursor ao passar o mouse */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+}
+
+button:hover {
+    background-color: #45a049;
+    /* Cor do botão ao passar o mouse */
+}
+
+#gifAcerto {
+    display: none;
+    /* Estilo padrão */
+    margin-top: 20px;
+    /* Espaçamento acima da imagem */
+}
+
+#instrumento {
+    display: flex; /* Ativa o flexbox */
+    gap: 30px; /* Espaçamento entre os elementos */
+    justify-content: center; /* Centraliza os elementos na div */
+    align-items: center; /* Alinha os elementos verticalmente */
+    margin-top: 20px; /* Espaçamento acima da div */
+}
+
+#instrumento img {
+    width: 300px; /* Define largura uniforme */
+    height: 300px; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem ocupe sua linha */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    border-radius: 100px; /* Adiciona bordas arredondadas */
+    border: 20px solid #ccc; /* Opcional: borda leve para destacar a imagem */
+
+}

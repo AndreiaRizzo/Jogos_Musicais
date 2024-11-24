@@ -1,8 +1,9 @@
-function verificarResposta(resposta) {
-    const respostaCorreta = "Trompete";
+function verificarResposta(resposta, respostaCorreta) {
+    
     if (resposta === respostaCorreta) {
         // Toca o som de acerto
-        document.getElementById("audioAcerto").play();
+        
+        
         document.getElementById("gifAcerto").style.display = "block";
 
     } else {

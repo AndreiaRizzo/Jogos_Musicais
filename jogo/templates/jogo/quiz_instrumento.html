@@ -1,38 +1,65 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
-    {% load static %}
-<head>
-    <meta charset="UTF-8">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
     <title>Quiz de Instrumento</title>
-    <link rel="stylesheet" href="{% static 'jogo/css/style.css' %}">
-
+    <link rel="stylesheet" href="{% static 'jogo/css/jogos.css' %}" />
+  </head>
+  <body>
     
-</head>
-<body>
-    <h1>Qual é o nome destes instrumentos?<br>
-    Acerte para ouvir o som dele!</h1>
-    
-    <!-- Exibe a imagem do instrumento -->
-    <img src="{% static 'jogo/imagens/trompeteCrian.jpg' %}" alt="Trompete" style="width:300px; height:auto;"><br>
 
-    <!-- Opções de resposta -->
-    <button onclick="verificarResposta('Trompete')">Trompete</button>
-    <button onclick="verificarResposta('Violino')">Violino</button>
-    <button onclick="verificarResposta('Flauta')">Flauta</button>
+    <h1>
+      Qual é o nome destes instrumentos?<br />
+      Acerte para ouvir o som dele!
+    </h1>
 
-    <!-- Áudio para resposta correta -->
-    <audio id="audioAcerto" src="{% static 'jogo/sons/TrompeteAcerto.mp3' %}" preload="auto"></audio>
-    <div id="gifAcerto">
-        <img src="{% static 'jogo/imagens/gifAcerto.gif' %}" alt="Acerto" style="width:200px; height:auto;">
+    <div id="instrumento">
+      <div>
+        <img src="{% static 'jogo/imagens/trompeteCrian.jpg' %}" alt="Trompete"  /><br />
+
+        <!-- Opções de resposta -->
+        <button onclick="verificarResposta('Trompete', 'Trompete')">Trompete</button>
+        <button onclick="verificarResposta('Violino', 'Trompete')">Violino</button>
+        <button onclick="verificarResposta('Flauta', 'Trompete')">Flauta</button>
+
+        <!-- Áudio para resposta correta -->
+        <audio id="audioAcerto" src="{% static 'jogo/sons/TrompeteAcerto.mp3' %}" preload="auto"></audio>
+        <div id="gifAcerto">
+          <img src="{% static 'jogo/imagens/gifAcerto.gif' %}" alt="Acerto" style="width:200px; height:auto;" />
+        </div>
+      </div>
+
+      <div >
+        <img src="{% static 'jogo/imagens/trombone.jpeg' %}" alt="Trombone"  /><br />
+  
+        <!-- Opções de resposta -->
+        <button onclick="verificarResposta('Tuba', 'Trombone')">Tuba</button>
+        <button onclick="verificarResposta('Trombone', 'Trombone')">Trombone</button>
+        <button onclick="verificarResposta('Piano', 'Trombone')">Piano</button>
+  
+        <!-- Áudio para resposta correta -->
+        <audio id="" src="{% static 'jogo/sons/piano.mp3' %}" preload="auto"></audio>
+        
+      </div>
+
+      <div >
+        <img src="{% static 'jogo/imagens/tuba.jpeg' %}" alt="Tuba"  /><br />
+  
+        <!-- Opções de resposta -->
+        <button onclick="verificarResposta('Tuba', 'Tuba')">Tuba</button>
+        <button onclick="verificarResposta('Trompete', 'Tuba')">Trompete</button>
+        <button onclick="verificarResposta('Eufonio', 'Tuba')">Eufonio</button>
+  
+        <!-- Áudio para resposta correta -->
+        <audio id="" src="{% static 'jogo/sons/Tuba.mp3' %}" preload="auto"></audio>
+        
+      </div>
+
     </div>
 
-   
-    
-
     <script src="{% static 'jogo/js/script.js' %}"></script>
-    <br>
+    <br />
     <a href="{% url 'home' %}">Voltar para a página inicial</a>
-</body>
+  </body>
 </html>
